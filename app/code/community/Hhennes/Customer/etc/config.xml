@@ -52,4 +52,12 @@
             </updates>
         </layout>
     </frontend>
+	<!-- Tests -->
+    <phpunit>
+        <suite>
+            <modules>
+                <Hhennes_Customer />
+            </modules>
+        </suite>
+    </phpunit>
 </config>
