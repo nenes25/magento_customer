@@ -1,4 +1,4 @@
 app/code/community/Hhennes/Customer/  app/code/community/Hhennes/Customer/
-app/design/adminhtml/default/default/layout/hhennes_customer.xml  app/design/adminhtml/default/default/layout/hhennes_customer.xml
-app/design/adminhtml/default/default/layout/template/hhennes/customer/  app/design/adminhtml/default/default/layout/template/hhennes/customer/
+app/design/frontend/base/default/layout/hhennes_customer.xml  app/design/adminhtml/frontend/base/layout/hhennes_customer.xml
+app/design/frontend/base/default/layout/template/hhennes/customer/  app/design/frontend/base/default/layout/template/hhennes/customer/
 app/etc/modules/Hhennes_Customer.xml  app/etc/modules/Hhennes_Customer.xml
