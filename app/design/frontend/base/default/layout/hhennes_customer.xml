@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+
+    
+    <!-- Ajout du champ supplémentaire dans le formulaire de création de compte -->
+    <customer_account_create>
+        <reference name="form.additional.info">
+            <!-- On peut rajouter ici autant de blocks que souhaités -->
+            <block type="core/template" name="hhennes.customer.fields" as="hhennes.customer.fields" template="hhennes/customer/form/register.phtml" />
+        </reference>
+    </customer_account_create>
+    
+    <!-- Ajout du champ supplémentaire dans le formulaire de création de compte du checkout -->
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.billing">
+            <reference name="form.additional.info">
+                <block type="core/template" name="hhennes.customer.fields" as="hhennes.customer.fields" template="hhennes/customer/form/register.phtml">
+                    <!-- On défini que le block est dane le checkout pour définir les variables -->
+                    <action method="setData">
+                        <name>in_checkout</name>
+                        <value>1</value>
+                    </action>
+                </block>
+            </reference>
+        </reference>
+    </checkout_onepage_index>
+    
+</layout>

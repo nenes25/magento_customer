@@ -1,0 +1,33 @@
+<?php
+// Ce template est utilisé dans le formulaire de création de compte standard et checkout
+// On détermine le nom de la variable en fonction du contexte
+if ( $this->getData('in_checkout')) {
+    $selectName = "billing[website_know]";
+}
+else {
+    $selectName = "website_know";
+}
+?>
+<li class="fields">
+    <div class="field">
+        <label for="<?php echo $selectName; ?>"><?php echo $this->__('How do you know about this website'); ?></label>
+        <div class="input-box">
+
+            <?php
+            //Récupération des informations de l'attribut
+            $attributeId = Mage::getResourceModel('eav/entity_attribute')->getIdByCode('customer', 'website_know');
+            $attribute = Mage::getModel('eav/entity_attribute')->load($attributeId);
+            $attributeOptions = $attribute->getSource()->getAllOptions();
+
+            //On utilise l'affichage standard d'un block html
+            echo $this->getLayout()->createBlock('core/html_select')
+                    ->setName($selectName)
+                    ->setId($selectName)
+                    ->setTitle($this->__('website_know'))
+                    ->setClass('validate-select')
+                    ->setOptions($attributeOptions)
+                    ->getHtml();
+            ?>
+        </div>
+    </div>
+</li>

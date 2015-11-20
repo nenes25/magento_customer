@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<config>
+ 
+    <!-- Configuration de base du Module -->
+    <modules>
+        <Hhennes_Customer>
+            <version>0.1.0</version>    
+        </Hhennes_Customer>
+    </modules>
+ 
+    <!-- Configuration globale -->
+    <global>
+        <helpers>
+            <hhennes_customer>
+                <class>Hhennes_Customer_Helper</class>    
+            </hhennes_customer>
+        </helpers>
+        <resources>
+            <hhennescustomer_setup>
+                <setup>
+                    <module>Hhennes_Customer</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </hhennescustomer_setup>
+        </resources>
+        <!-- Nouveau champ de création de compte dans le checkout -->
+        <fieldsets>
+            <customer_account>
+                <website_know>
+                    <create>1</create>
+                    <update>1</update>
+                    <to_quote>*</to_quote>
+                </website_know>
+            </customer_account>
+            <checkout_onepage_quote>
+                <website_know>
+                    <to_customer>*</to_customer>>
+                </website_know>
+            </checkout_onepage_quote>
+        </fieldsets>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <hhennes_customer>
+                    <file>hhennes_customer.xml</file>
+                </hhennes_customer>
+            </updates>
+        </layout>
+    </frontend>
+</config>
