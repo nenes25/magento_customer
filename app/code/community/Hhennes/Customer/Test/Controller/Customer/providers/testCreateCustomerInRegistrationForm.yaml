@@ -1,0 +1,29 @@
+- customer:
+    firstname: firstname
+    lastname : by friend
+    email: test%s@yopmail.com
+    password: testpassword
+    confirmation: testpassword
+    website_know: By a friend
+- customer:
+    firstname: firstname2
+    lastname : by the work
+    email: test%s@yopmail.com
+    password: testpassword2
+    confirmation: testpassword2
+    website_know: By the work
+- customer:
+    firstname: firstnameG
+    lastname : By google
+    email: test%s@yopmail.com
+    password: testpassword2
+    confirmation: testpassword2
+    website_know: By google
+- customer:
+    firstname: firstname
+    lastname : other
+    email: test%s@yopmail.com
+    password: testpassword2
+    confirmation: testpassword2
+    website_know: Other
+    

@@ -18,7 +18,7 @@ else {
             $attributeId = Mage::getResourceModel('eav/entity_attribute')->getIdByCode('customer', 'website_know');
             $attribute = Mage::getModel('eav/entity_attribute')->load($attributeId);
             $attributeOptions = $attribute->getSource()->getAllOptions();
-
+            
             //On utilise l'affichage standard d'un block html
             echo $this->getLayout()->createBlock('core/html_select')
                     ->setName($selectName)
