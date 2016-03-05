@@ -51,5 +51,14 @@
                 </hhennes_customer>
             </updates>
         </layout>
+		<translate>
+            <modules>
+                <Hhennes_Customer>
+                    <files>
+                        <default>Hhennes_Customer.csv</default>
+                    </files>
+                </Hhennes_Customer>
+            </modules>
+        </translate>
     </frontend>
 </config>
